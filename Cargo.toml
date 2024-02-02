@@ -6,14 +6,19 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-# halo2curves = { path = "../../tmp/halo2curves"}
-# ark-bn254 = { path = "../../tmp/algebra/curves/bn254" }
-ark-bn254 = "0.4.0"
+# fast_halo2curves = { git = "https://github.com/sragss/halo2curves", package = "halo2curves"}
+fast_halo2curves = { path = "../../sragss/halo2curves", package = "halo2curves"}
 halo2curves = "0.6.0"
+ark-bn254 = "0.4.0"
 criterion = "0.3"
 ark-std = "0.4.0"
 ark-ff = "0.4.2"
+unroll = "0.1.5"
 
 [[bench]]
 name = "mul"
 harness = false
+
+[profile.release]
+opt-level = 3
+lto = "fat"
