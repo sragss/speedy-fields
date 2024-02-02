@@ -409,27 +409,6 @@ checksum = "eabb4a44450da02c90444cf74558da904edde8fb4e9035a9a6a4e15445af0bd7"
 [[package]]
 name = "halo2curves"
 version = "0.6.0"
-dependencies = [
- "blake2b_simd",
- "ff",
- "group",
- "lazy_static",
- "num-bigint",
- "num-traits",
- "pairing",
- "pasta_curves",
- "paste",
- "rand",
- "rand_core",
- "rayon",
- "static_assertions",
- "subtle",
- "unroll",
-]
-
-[[package]]
-name = "halo2curves"
-version = "0.6.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "d3675880dc0cc7cd468943266297198a28f88210ba60ca5e0e04d121edf86b46"
 dependencies = [
@@ -447,6 +426,28 @@ dependencies = [
  "rayon",
  "static_assertions",
  "subtle",
+]
+
+[[package]]
+name = "halo2curves"
+version = "0.6.0"
+source = "git+https://github.com/sragss/halo2curves#ba0f861185d623fbe11fb877f2a025bec0405473"
+dependencies = [
+ "blake2b_simd",
+ "ff",
+ "group",
+ "lazy_static",
+ "num-bigint",
+ "num-traits",
+ "pairing",
+ "pasta_curves",
+ "paste",
+ "rand",
+ "rand_core",
+ "rayon",
+ "static_assertions",
+ "subtle",
+ "unroll",
 ]
 
 [[package]]
@@ -806,8 +807,8 @@ dependencies = [
  "ark-ff",
  "ark-std",
  "criterion",
- "halo2curves 0.6.0",
  "halo2curves 0.6.0 (registry+https://github.com/rust-lang/crates.io-index)",
+ "halo2curves 0.6.0 (git+https://github.com/sragss/halo2curves)",
  "unroll",
 ]
 

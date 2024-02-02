@@ -3,11 +3,9 @@ name = "speedy-fields"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [dependencies]
-# fast_halo2curves = { git = "https://github.com/sragss/halo2curves", package = "halo2curves"}
-fast_halo2curves = { path = "../../sragss/halo2curves", package = "halo2curves"}
+fast_halo2curves = { git = "https://github.com/sragss/halo2curves", package = "halo2curves"}
+# fast_halo2curves = { path = "../../sragss/halo2curves", package = "halo2curves"}
 halo2curves = "0.6.0"
 ark-bn254 = "0.4.0"
 criterion = "0.3"
