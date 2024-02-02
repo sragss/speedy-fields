@@ -49,6 +49,7 @@ pub struct CIOS(pub [u64; 4]);
 impl CIOS {
     /// Implements normal CIOS
     #[unroll_for_loops]
+    #[inline(always)]
     pub fn mul(&self, rhs: &Self) -> Self {
         let mut t: [u64; N] = [0u64; N];
         let mut c1 = 0u64;
@@ -87,6 +88,7 @@ impl CIOS {
     /// Experimentally on ARM it's only marginally faster. Likely 1-4
     /// instructions.
     #[unroll_for_loops]
+    #[inline(always)]
     pub fn mul_edmsm(self, rhs: &Self) -> Self {
         let mut t: [u64; N+1] = [0u64; N+1];
         for i in 0..4 {
