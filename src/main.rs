@@ -7,9 +7,14 @@ use std::{time::Instant, hint::black_box};
 use ark_std::rand::Rng;
 use ark_ff::biginteger::BigInt;
 
+use speedy_fields::metal::{run, ark_run};
+
 const SIZE: usize = 10_000_000;
 
 fn main() {
+    run();
+    ark_run();
+
     let mut rng = ark_std::test_rng();
 
     let rands: Vec<([u64; 4], [u64; 4])> = (0..SIZE).map(|_| {

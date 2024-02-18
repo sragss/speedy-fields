@@ -12,6 +12,8 @@ criterion = "0.3"
 ark-std = "0.4.0"
 ark-ff = "0.4.2"
 unroll = "0.1.5"
+metal = "0.27.0"
+objc = "0.2.7"
 
 [[bench]]
 name = "mul"

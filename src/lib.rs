@@ -1,3 +1,5 @@
+pub mod metal;
+
 /// This file implements the EdMSM paper for Montgomery Multiplication with constants for Bn254.
 /// The arithmetic functions are lifted from Arkworks / Halo2Curves.
 /// https://eprint.iacr.org/2022/1400.pdf
